@@ -7,6 +7,10 @@ font-family: "Open Sans", san-serif;
     /* make box width include paddig and border */
     box-sizing: border-box;
 }
+/* allow auto to be a size in animation */
+:root {
+    interpolate-size: allow-keywords;
+}
 body {
     margin: 0;
     background-color: #555;
@@ -93,13 +97,21 @@ header div {
     animation: flyInFromLeft 1.5s ease-in;
 }
 #burger-nav-cb {
-   display: none;
+    position:absolute;
+    opacity:0;
+    width:1px;
+    height:1px;
 }
 /* when checkbox is checked (by clicking label burger icon) target the sibling ul */
+
+/* GO HERE:
+https://github.com/brianmccln */
+
 #burger-nav-cb:checked ~ ul {
-    /* display: flex; */
+    display: flex;
     height: auto;
 }
+
 @keyframes flyInFromLeft {
    from {
         left: -1200px;
@@ -110,18 +122,18 @@ header div {
         opacity: 1;
     }
 }
-/* allow auto to be a size in animation */
-:root {
-    interpolate-size: allow-keywords;
-}
+
 /* mobile-first design: hide the nav ul */
 nav {
-    /* border: 3px dashed aqua; */
+    border: 3px dashed aqua;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
     animation: slideDownFromTop 1.5s ease-in;
+}
+nav > * {
+    border: 3px dashed lime;
 }
 @keyframes slideDownFromTop {
     from {
@@ -134,17 +146,24 @@ nav {
      }
  }
 nav ul {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
     height: 0; /* anim start ht */
-    overflow: hidden;
-    transition: height 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    pointer-events: none;
+    transition: height 0.5s ease-in-out, opacity 0.2 ease-in-out;
     margin: 0;
     padding: 0;
-    display: none;
+    opacity:0;
     list-style-type: none;
-    width:350px;
-    display: flex;
+    /* width:350px; */
+    /* display: flex; */
     /* nav ul animates down as li stack */
-    flex-direction: column;
+
 }
 nav ul a {
     text-decoration: none;
@@ -152,6 +171,7 @@ nav ul a {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
+    padding: 10px;
 }
 nav ul a:hover, nav ul a:focus {
     color: #97d0f2;
@@ -178,8 +198,10 @@ footer {
 
     nav ul {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        height: auto; 
     }
     .burger {
         display: none;

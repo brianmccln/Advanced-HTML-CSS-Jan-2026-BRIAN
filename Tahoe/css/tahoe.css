@@ -17,6 +17,17 @@ body {
     margin: 0;
     background-color: #555;
     font-family: "Open Sans", sans-serif;
+    /* background gradient */
+    /* background-image: radial-gradient(red, orange, purple); */
+    /* background-image: linear-gradient(red, orange, purple); */
+    /* background-image: linear-gradient(to right, red, orange, purple); */
+    /* background-image: linear-gradient(45deg, red, orange, purple); */
+    /* background-image: repeating-linear-gradient(45deg, red 0px, red 40px, orange 40px, orange 80px, purple 80px, purple 120px); */
+    /* background-image: repeating-linear-gradient(45deg, transparent 0px, transparent 40px, orange 40px, orange 80px, purple 80px, purple 120px); */
+    /* background-image: repeating-linear-gradient(45deg, transparent 0px, transparent 40px, orange 40px, orange 80px); */
+    background-image: repeating-linear-gradient(45deg, transparent 0px, transparent 10px, rgba(0, 0, 0, 0.2) 10px, #00000033 20px);
+    /* prevent bg gradient from moving on page scroll */
+    background-attachment: fixed;
 }
 
 img {
@@ -32,9 +43,20 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 55px;
     margin: 0;
-}
+    background-image: linear-gradient(dodgerblue,forestgreen);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 2px;
+    color: transparent; /* any text color blocks background gradient */
+    -webkit-text-stroke: 1px #ffffff;      /* <-- the “border” */
+    /* optional: makes sure fill stays transparent in WebKit */
+    -webkit-text-fill-color: transparent;
+    /* pale bluish drop shadow on the letters */
+    /* text-shadow: 6px 6px 8px == horiz offset, vert offset, fuzziness */
+    text-shadow: 5px 5px 5px rgba(120, 190, 255, 0.5);
+} 
 
 h2 {
     font-size: 30px;
@@ -60,7 +82,9 @@ p {
 
 /* --- Layout Containers --- */
 .container {
-    margin: 20px auto;
+    position:relative;
+    top:0px;
+    margin: 12px auto;
     padding: 20px;
     max-width: 1000px;
 }
@@ -108,9 +132,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center; /* keep logo and burger aligned */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     position: relative;
-    padding: 10px 0;
+    padding: 20px;
+    padding-bottom: 0;
     animation: slideDownFromTop 1.5s ease-in;
 }
 
@@ -213,8 +238,22 @@ header div {
 
 /* --- Desktop View --- */
 @media (min-width: 768px) {
+
+    .container {
+        top:70px;
+    }
     .burger, label[for="burger-nav-cb"] {
         display: none;
+    }
+
+    nav {
+        position: fixed;
+        background-color: rgba(50,50,50,.75);
+        top:0;
+        left:0;
+        right:0;
+        z-index:1; /* put nav on top of container */
+        padding-bottom: 20px;
     }
 
     nav ul {

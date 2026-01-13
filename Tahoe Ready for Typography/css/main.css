@@ -1,0 +1,25 @@
+body {
+	background: #555;
+	margin: 20px;
+}
+img {
+	max-width: 100%;
+}
+header, main, footer {
+	max-width: 800px;
+	margin: auto;
+}
+header {
+	background: url(../img/masthead-darkened.jpg) center / cover;
+	color: #fff;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+section {
+	background: #fff;
+}
+footer {
+	color: #ccc;
+	text-align: center;
+}

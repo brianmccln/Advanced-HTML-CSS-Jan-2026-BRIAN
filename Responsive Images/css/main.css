@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+a {
+	text-decoration: none;
+	color: #0062AF;
+}
+a:hover {
+	color: #AF0002;
+}
+h1, p {
+	margin: 20px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --- MOBILE BASE STYLES --- */
+        /* Hide the actual checkbox from view */
+        .nav-toggle {
+            display: none;
+        }
+
+        /* Base style for the list (hidden) */
+        /* 1. ENABLE GLOBAL INTERPOLATION */
+        /* This allows transitions to 'auto' throughout the site */
+        /* Key Technical Details */
+        :root {
+            interpolate-size: allow-keywords;
+        }
+
+        /* 2. MOBILE-FIRST BASE STYLES (0px+) */
+        nav {
+            display: flex;
+            flex-wrap: wrap; /* Allows the menu to wrap below the logo/burger */
+            align-items: center;
+            justify-content: space-between;
+            background-color: #555;
+            padding: 20px;
+        }
+        nav a {
+            color: #fff;
+            font-family: sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-left: 15px;
+            line-height: 24px;
+        }
+
+        .nav-toggle {
+            display: none; /* Hide the actual checkbox */
+        }
+
+        .burger {
+            width: 44px;
+            cursor: pointer;
+            display: block;
+            color: #fff;
+            /* This flips the black bars to white */
+            filter: invert(100%);
+        }
+
+        ul {
+            /* Animation Setup */
+            height: 0;
+            overflow: hidden; 
+            transition: height 0.5s ease-in-out;
+            
+            /* Mobile Layout */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* THE TRIGGER: Show menu when checkbox is checked */
+        .nav-toggle:checked ~ ul {
+            height: auto; /* Interpolate-size makes this transition smooth! */
+        }
+
+        /* 3. DESKTOP STYLES (1024px+) */
+        @media (min-width: 1024px) {
+            .burger-label {
+                display: none; /* Hide burger on desktop */
+            }
+
+            ul {
+                /* Reset for Desktop */
+                height: auto; 
+                width: auto;
+                flex-direction: row;
+                gap: 20px;
+                overflow: visible;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="../img/tahoe-logo.svg" alt="Tahoe Adventure Club">
+        </a>
+    
+        <!-- 1. Hidden checkbox to hold the state -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+        <!-- 2. Label acts as the clickable trigger for the checkbox -->
+        <label for="nav-toggle" class="burger-label">
+            <img src="../img/burger-menu.svg" alt="hamburger menu nav icon" class="burger">
+        </label>
+    
+        <ul>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="places-to-stay.html">Stay</a></li>
+            <li><a href="food-drink.html">Food & Drink</a></li>
+        </ul>
+    </nav>    
+    
+</body>
+</html>

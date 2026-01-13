@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* --- MOBILE BASE STYLES --- */
+        /* Hide the actual checkbox from view */
+        .nav-toggle {
+            display: none;
+        }
+
+        /* Base style for the list (hidden) */
+        ul {
+            display: none;
+            flex-direction: column; /* Vertical stack for mobile */
+            width: 100%;
+        }
+
+        .burger {
+            width: 44px; /* Touch-friendly size */
+            cursor: pointer;
+        }
+
+        /* THE MAGIC: When checkbox is checked, show the adjacent ul */
+        .nav-toggle:checked ~ ul {
+            display: flex;
+        }
+
+        /* --- DESKTOP (1024px+) --- */
+        @media (min-width: 1024px) {
+            /* Hide the burger trigger */
+            .burger-label {
+                display: none;
+            }
+
+            /* Force show the menu as a horizontal row */
+            ul {
+                display: flex;
+                flex-direction: row;
+                width: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="img/tahoe-logo.svg" alt="Tahoe Adventure Club">
+        </a>
+    
+        <!-- 1. Hidden checkbox to hold the state -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    
+        <!-- 2. Label acts as the clickable trigger for the checkbox -->
+        <label for="nav-toggle" class="burger-label">
+            <img src="../img/burger-menu.svg" alt="hamburger menu nav icon" class="burger">
+        </label>
+    
+        <ul>
+            <li><a href="things-to-do.html">Things To Do</a></li>
+            <li><a href="places-to-stay.html">Stay</a></li>
+            <li><a href="food-drink.html">Food & Drink</a></li>
+        </ul>
+    </nav>    
+    
+</body>
+</html>

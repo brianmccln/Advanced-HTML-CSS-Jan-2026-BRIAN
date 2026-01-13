@@ -1,0 +1,38 @@
+/* --- MOBILE BASE STYLES --- */
+
+/* Hide the actual checkbox from view */
+.nav-toggle {
+    display: none;
+}
+
+/* Base style for the list (hidden) */
+ul {
+    display: none;
+    flex-direction: column; /* Vertical stack for mobile */
+    width: 100%;
+}
+
+.burger {
+    width: 44px; /* Touch-friendly size */
+    cursor: pointer;
+}
+
+/* THE MAGIC: When checkbox is checked, show the adjacent ul */
+.nav-toggle:checked ~ ul {
+    display: flex;
+}
+
+/* --- DESKTOP (1024px+) --- */
+@media (min-width: 1024px) {
+    /* Hide the burger trigger */
+    .burger-label {
+        display: none;
+    }
+
+    /* Force show the menu as a horizontal row */
+    ul {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+}

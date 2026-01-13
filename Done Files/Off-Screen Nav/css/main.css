@@ -1,0 +1,134 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+html {
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+body {
+	font-family: "Monda", sans-serif;
+	line-height: 1.5;
+	margin: 0;
+}
+img, svg {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+h1, h2 {
+	font-family: "Bree Serif", serif;
+}
+h1 {
+	font-size: 5rem;
+	line-height: .9;
+	color: #fff;
+	background: #483a40 url(../img/cab.jpg) center / cover;
+	text-align: center;
+	margin: 0;
+	padding: 15%;
+}
+h2 {
+	color: #b5413b;
+	font-size: 1.5625rem;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+p {
+	line-height: 1.9;
+}
+a {
+	color: #b5413b;
+}
+a:hover {
+	color: #fc3a53;
+}
+main {
+	max-width: 50em;
+	padding: 20px;
+	margin: auto;
+}
+nav {
+	background-color: rgba(72,58,64, .92);
+}
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+nav li a {
+	display: block;
+	padding: 15px;
+	color: white;
+	text-decoration: none;
+}
+nav li a:hover {
+	background-color: rgba(0,0,0, .5);
+}
+.nyc-logo {
+	width: 75px;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+}
+.pull-quote {
+	font-family: "Bree Serif", serif;
+	border-left: 3px solid #bedd6e;
+	padding-left: 1em;
+	color: #b5413b;
+	font-size: 22px;
+	line-height: 1.4;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+#nav-checkbox {
+	position: fixed;
+	clip-path: circle(0);
+}
+@media (max-width: 700px) {
+	nav {
+		position: fixed;
+		width: 12em;
+		left: -12em;
+		height: 100%;
+		overflow-y: auto;
+		z-index: 100;
+		transition: all .2s ease;
+	}
+	#nav-checkbox:checked ~ nav {
+		left: 0;
+	}
+	.menu-button {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		color: #fff;
+		padding: 7px;
+		cursor: pointer;
+	}
+	.close-button img {
+		padding: 17px;
+		margin-top: 7px;
+		cursor: pointer;
+	}
+	.overlay {
+		display: none;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+	}
+	#nav-checkbox:checked ~ .overlay {
+		display: block;
+	}
+}
+@media (min-width: 701px) {
+	.menu-button, .close-button img {
+		display: none;
+	}
+	nav {
+		text-align: right;
+		padding-right: .6em;
+	}
+	nav ul {
+		display: inline-flex;
+	}
+}

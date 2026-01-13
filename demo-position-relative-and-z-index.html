@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position Relative & Z-Index</title>
+	<style>
+		.block {
+			font-size: 1.5rem;
+			background: gray;
+			border: 1px solid #000;
+			padding: 20px;
+			margin-top: -30px;
+			/*position: relative;*/
+		}
+		.block2 {
+			background: orange;
+			/*z-index: 5;*/
+		}
+		.block3 {
+			background: teal;
+			/*z-index: 6;*/
+		}
+		.block4 {
+			background: olive;
+		}
+		body {
+			font-family: sans-serif;
+		}
+		h1 {
+			margin-bottom: 3rem;
+		}
+	</style>
+</head>
+<body>
+	<h1>Position Relative & Z-Index</h1>
+	<div class="block block1">I am a block - gray</div>
+	<div class="block block2">I am a block - orange</div>
+	<div class="block block3">I am a block - teal</div>
+	<div class="block block4">I am a block - olive</div>
+</body>
+</html>

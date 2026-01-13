@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+body {
+	background: #555;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.75;
+	margin: 0 0 30px 0;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+a {
+	color: #2985d1;
+	text-decoration: none;
+}
+a:hover,
+a:focus {
+	color: #ff6924;
+}
+h1, h2 {
+	font-family: "Alfa Slab One", "Open Sans", sans-serif;
+	font-weight: normal;
+	line-height: 1.2;
+}
+h1 {
+	font-size: 11vw;
+	margin: 10px 0;
+}
+h2 {
+	font-size: 26px;
+	margin: 0;
+}
+h2 + p {
+	font-weight: 700;
+	font-style: italic;
+	opacity: .5;
+	margin-top: 3px;
+}
+nav {
+	background: rgba(0,0,0, .33);
+	padding: 20px 5px;
+	text-align: center;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+}
+nav li {
+	display: inline;
+}
+nav ul a {
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
+	padding: 2px 8px;
+	display: inline-block;
+	border: 2px solid transparent;  /* prevents a shift for when the hover border appears */
+}
+nav ul a:hover,
+nav ul a:focus {
+	color: #fff;
+	border-bottom: 2px dotted currentColor;
+}
+header {
+	background: linear-gradient(rgba(0,201,255, .6), rgba(146,254,157, .6)),
+					url(../img/masthead.jpg) right top / cover;
+	color: #fff;
+}
+header img {
+	width: 115px;
+}
+.masthead {
+	padding: 6%;
+	text-align: center;
+}
+.masthead p {
+	font-size: 25px;
+	line-height: 1.2;
+	font-weight: 350;
+	margin: 0;
+}
+header, section {
+	box-shadow: 0 5px 50px rgba(0,0,0, 0.6);
+}
+section {
+	background: #fff;
+	margin: 30px;
+}
+section .text-wrapper {
+	padding: 20px;
+}
+.popular {
+	margin: 0;
+	background: #02caf2;
+	color: #fff;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+.button-primary {
+	color: #fff;
+	background: #ff6924;
+	padding: 3px 16px;
+	display: inline-block;
+	border-radius: 40px;
+}
+.button-primary:hover, 
+.button-primary:focus {
+	color: #fff;
+	background: #fa4f00;
+}
+.button-secondary svg {
+	vertical-align: baseline;
+	margin-left: 5px;
+}
+.button-secondary svg * {
+	stroke: currentColor;
+	stroke-width: 1.2;
+}
+footer {
+	color: #ccc;
+	text-align: center;
+	font-weight: 300;
+}
+
+@media (min-width: 600px) {
+	h1 {
+		font-size: clamp(50px, 7.5vw, 90px);
+	}
+	main {
+		max-width: 800px;
+		margin: 30px auto;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		padding: 20px 30px;
+	}
+	nav ul {
+		margin-left: auto;
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 1100px) {
+	main {
+		max-width: 1400px;
+		display: flex;
+		align-items: flex-start;
+		gap: 30px;
+		padding: 0 30px;
+	}
+	section {
+		margin: 0;
+		width: 33.33%;
+	}
+}

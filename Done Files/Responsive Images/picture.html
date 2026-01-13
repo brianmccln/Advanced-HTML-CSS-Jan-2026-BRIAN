@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>picture element</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<picture>
+		<source media="(min-width: 1280px)" 
+				sizes="50vw"
+				srcset="img/model-desktop-1280.jpg 1280w,
+						img/model-desktop-2560.jpg 2560w">
+		<source media="(min-width: 768px)" 
+				sizes="75vw"
+				srcset="img/model-tablet-768.jpg 768w,
+						img/model-tablet-1536.jpg 1536w">
+		<img src="img/model-mobile-375.jpg" alt="Model"
+			 sizes="100vw"
+			 srcset="img/model-mobile-375.jpg 375w, 
+			 		 img/model-mobile-750.jpg 750w">
+	</picture>
+</body>
+</html>

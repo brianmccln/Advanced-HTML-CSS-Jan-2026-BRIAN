@@ -1,0 +1,122 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+:root {
+	--font-primary: Vollkorn, serif; 
+	--font-secondary: Oswald, sans-serif;
+}
+html {
+	font-family: var(--font-primary);
+	font-size: 1.125rem;
+	line-height: 1.5;
+
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+}
+img, svg {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+h1 {
+	text-align: center;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	line-height: 1.2;
+}
+header {
+	text-align: center;
+	line-height: 1;
+}
+header a {
+	font-family: var(--font-secondary);
+	color: #ebebeb;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+header a:hover, 
+header a:focus {
+	color: #17a99c;
+}
+.logo-wrapper {
+	background: #444;
+	box-shadow: 0 2px 15px rgba(0,0,0, .8);
+	position: relative;
+	font-size: 2.3rem;
+	letter-spacing: 0.08rem;
+	font-weight: 400;
+	margin: 0;
+	padding: 20px;
+}
+.logo-wrapper a {
+	text-shadow: 2px 2px 0 #444, 4px 4px 0 #666;
+}
+.logo-wrapper a:hover {
+	text-shadow: -2px 2px 0 #444, -4px 4px 0 #666;
+}
+nav {
+	background: #333;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline-flex;
+}
+nav a {
+	padding: 20px;
+}
+main {
+	padding: 20px;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.category a {
+	box-shadow: 0 12px 18px rgba(0,0,0, .3);
+	margin: 30px 0;
+	display: block;
+	text-decoration: none;
+}
+.category .description {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: var(--font-secondary);
+	font-size: 2rem;
+	line-height: 4rem;
+	color: #fff;
+	background: rgba(0,0,0, .4);
+}
+blockquote {
+	border-left: solid 3px #17a99c;
+	border-right: solid 3px #17a99c;
+	color: #505050;
+	margin: 20px;
+	padding: 20px;
+}
+blockquote p {
+	margin-top: 0;
+}
+footer {
+	color: #999;
+	font-size: .75rem;
+	text-align: center;
+	padding: 20px;
+}
+
+@media (min-width: 750px) {
+	h1 {
+		margin-top: 2.5rem;
+	}
+	.category {
+		display: flex;
+		gap: 30px;
+	}
+	blockquote {
+		margin: 30px auto;
+		width: 60%;
+	}
+}

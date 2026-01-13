@@ -1,0 +1,148 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+body {
+	background: #555;
+	margin: 20px;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.75;
+	padding:
+		env(safe-area-inset-top)
+		env(safe-area-inset-right)
+		env(safe-area-inset-bottom)
+		env(safe-area-inset-left)
+	;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+h1, h2, h3 {
+	font-family: "Alfa Slab One", "Open Sans", sans-serif;
+	font-weight: normal;
+	line-height: 1.2;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	margin-top: 60px;
+}
+h3 {
+	font-size: 24px;
+	background: #2fb3fe; 
+	color: #fff;
+	padding: 15px;
+	margin-top: 0;
+}
+h3 + p {
+	font-weight: 700;
+	font-style: italic;
+	opacity: .5;
+}
+a {
+	color: #2985d1;
+	text-decoration: none;
+}
+nav {
+	text-align: center;
+	margin-bottom: 20px;
+}
+nav img {
+	width: 115px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline;
+}
+nav ul a {
+	color: #fff;
+	font-weight: 800; 
+	text-transform: uppercase; 
+	padding: 8px;
+	display: inline-block;
+}
+nav ul a:hover,
+nav ul a:focus {
+	color: #97d0f2;
+}
+header, main, footer {
+	max-width: 800px;
+	margin: auto;
+}
+header, section {
+	border: 4px solid #2fb3fe;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+header {
+	background: url(../img/masthead-darkened.jpg) center / cover;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+}
+section {
+	background: #fff;
+}
+section p {
+	margin: 15px;
+}
+footer {
+	color: #ccc;
+	text-align: center;
+	font-weight: 300;
+}
+.button-secondary:hover, 
+.button-secondary:focus {
+	color: red;
+}
+.button-secondary svg {
+	vertical-align: baseline;
+	margin-left: 5px;
+}
+.button-secondary svg * {
+	stroke: currentColor;
+	stroke-width: 1.2;
+}
+@media (min-width: 600px) {
+	body {
+		margin-top: 130px;
+	}
+	nav {
+		-webkit-backdrop-filter: blur(15px) saturate(0%); 
+		backdrop-filter: blur(15px) saturate(0%);
+		background: rgba(0,0,0, .5);
+		display: flex;
+		align-items: center;
+		padding:
+			20px
+			calc( 20px + env(safe-area-inset-right) )
+			20px
+			calc( 20px + env(safe-area-inset-left) )
+		;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	nav ul {
+		margin-left: auto;
+	}
+}
+@media (min-width: 600px) and (min-height: 750px) {
+	nav {
+		position: fixed;
+	}
+}

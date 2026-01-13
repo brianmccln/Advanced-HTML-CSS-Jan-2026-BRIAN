@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Helping Hands - Volunteer Opportunities</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=auto" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header>
+		<nav class="content-wrapper">
+			<a href="index.html" class="logo"><img src="img/helping-hands-logo.svg" alt="Helping Hands"></a>
+			<ul>
+				<li><a href="volunteer.html">Volunteer</a></li>
+				<li><a href="donate.html">Donate</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="content-wrapper">
+		<h1>Become a Volunteer</h1>
+		<p>Volunteers are the life-blood of our non-profit charity community. To receive more information about volunteer opportunities, please fill out the form&nbsp;below.</p>
+		<div class="columns-2">
+			<div class="column-left">
+				<h2 class="form-heading">Sign Up for More Info</h2>
+				<form action="">
+					<label for="full-name">First and Last Name</label>
+					<input type="text" name="full-name" id="full-name">
+
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email">
+
+					<label for="time">I am available</label>
+					<select name="time" id="time">
+						<option selected disabled>Choose one</option>
+						<option value="days">Days</option>
+						<option value="nights">Nights</option>
+					</select>
+
+					<fieldset>
+						<legend>I want to volunteer for</legend>
+						<ul>
+							<li>
+								<input type="checkbox" name="interests" id="housing" value="housing">
+								<label for="housing">Affordable Housing</label>
+							</li>
+							<li>
+								<input type="checkbox" name="interests" id="animals" value="animals">
+								<label for="animals">Animals</label>
+							</li>
+						</ul>
+					</fieldset>
+
+					<label for="comments">Anything else you'd like to add?</label>
+					<textarea name="comments" id="comments"></textarea>
+
+					<input type="submit" value="Sign Me Up">
+				</form>
+			</div>
+			<aside class="column-right">
+				<h2>Volunteer Opportunities</h2>
+				<section class="clearfix">
+					<div class="time-badge">Evening</div>
+					<h3><img src="img/icon-soup-kitchen.svg" alt="" class="opportunity-icon">Soup Kitchen</h3>
+					<p>Our 40 year-old soup kitchen has expanded to serving dinner in addition to lunch seven days a week. Evening volunteers are needed.</p>
+				</section>
+				<section class="clearfix">
+					<div class="time-badge">Day</div>
+					<h3><img src="img/icon-dog-walker.svg" alt="" class="opportunity-icon">Dog Walker</h3>
+					<p>The Barking Lot Animal Shelter is currently looking for volunteers to walk multiple dogs at a time, for half an hour each day.</p>
+				</section>
+				<section class="clearfix">
+					<div class="time-badge">Flexible</div>
+					<h3><img src="img/icon-tutor.svg" alt="" class="opportunity-icon">School Tutor</h3>
+					<p>Help students in Kindergarten through 12th grade.</p>
+				</section>
+			</aside>
+		</div>
+	</main>
+	<footer>
+		<div class="content-wrapper">
+			<ul>
+				<li><a href="donate.html">Support Us</a></li>
+				<li><a href="privacy.html">Privacy Policy</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="copyright">Copyright © Helping Hands</div>
+		</div>
+	</footer>
+</body>
+</html>

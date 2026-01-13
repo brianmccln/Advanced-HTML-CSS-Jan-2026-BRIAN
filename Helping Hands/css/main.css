@@ -54,6 +54,40 @@ h1 + p {
 	margin-bottom: 30px;
 	text-align: center;
 }
+form {
+	border: 2px solid #888;
+	/* min-height: 400px; */
+	padding: 20px;
+	border-radius: 0 0 8px 8px;
+	background-color: #eee;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 10px;
+}
+input[type="text"], 
+input[type="email"] {
+	font-size: 17px;
+	padding: 3px 6px;
+	width: 200px;
+	margin-bottom: 10px;
+}
+input[type="submit"] {
+	display: inline-block;
+	font-size: 17px;
+	padding: 3px 6px;
+	margin-left: 105px; /* move sumbit btn over to the right */
+	width: 105px;
+} 
+label[for="comments"] {
+	width: 100%;
+}
+textarea {
+	width: 100%;
+	min-height: 120px;
+	resize: vertical; /* cannot drag textarea wider--only taller */
+}
 .content-wrapper {
 	margin: 0 auto;
 	max-width: 768px;

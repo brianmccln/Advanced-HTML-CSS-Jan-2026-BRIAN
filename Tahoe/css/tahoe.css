@@ -45,6 +45,15 @@ img {
     vertical-align: bottom;
 }
 
+/* $= targets anything that ends with what is within the quotes. */
+a[href$=".pdf"] { 
+    background-image: url(../img/icon-pdf.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 32px;
+    padding-right: 36px;
+}
+
 /* --- Typography --- */
 h1, h2, h3 {
     font-family: "Alfa Slab One", serif;

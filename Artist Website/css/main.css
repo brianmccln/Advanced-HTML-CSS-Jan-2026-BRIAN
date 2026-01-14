@@ -134,6 +134,17 @@ footer {
 	filter: grayscale(50%);
 	opacity: .5;
 }
+.spinner {
+	position:relative;
+	z-index:2; 
+	border-radius:50%;
+	/* linear=same speed the whole time; infinite=loop */
+	animation: spinInPlace 60s linear infinite;
+}
+@keyframes spinInPlace {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
 @keyframes unfurlBar {
 	from { height:5px; }
 	to { height:2500px; }

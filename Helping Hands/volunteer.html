@@ -27,12 +27,12 @@
 			<div class="column-left">
 				<h2 class="form-heading">Sign Up for More Info</h2>
 
-				<form action="form-proc.php" method="get">
+				<form action="/form-proc" method="post">
 
 					<label for="first-name">First Name:</label>
 					<input type="text" name="firstName" id="first-name" required><br>
 
-					<label for="first-name">Last Name:</label>
+					<label for="last-name">Last Name:</label>
 					<input type="text" name="lastName" id="last-name" required><br>
 
 					<label for="email">Email:</label>
@@ -41,7 +41,29 @@
 					<label for="comments">Anything else you'd like to add?</label><br>
 					<textarea name="comments", id="comments"></textarea><br>
 
-					<input type="submit" name="submit" id="submit" required><br>
+					<p>I want to volunteer for (check as many as you wish):</p>
+					
+					<!-- ul>li*4>input[type="checkbox"]+label -->
+					<ul>
+						<li>
+							<input type="checkbox" id="housing">
+							<label for="housing">Affordable Housing</label>
+						</li>
+						<li>
+							<input type="checkbox" id="animals">
+							<label for="animals">Animal Rescue</label>
+						</li>
+						<li>
+							<input type="checkbox" id="tutoring">
+							<label for="tutoring">After School Tutoring</label>
+						</li>
+						<li>
+							<input type="checkbox" id="soup-kitchen">
+							<label for="soup-kitchen">Soup Kitchen</label>
+						</li>
+					</ul>
+
+					<input type="submit" name="submit" id="submit" required>
 
 				</form>
 

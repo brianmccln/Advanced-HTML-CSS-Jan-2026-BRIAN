@@ -34,7 +34,8 @@ header {
 header a {
 	font-family: var(--font-secondary);
 	color: #ebebeb;
-	display: block;
+	background-color: #88888888;
+	/* display: block; */
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -43,12 +44,17 @@ header a:focus {
 	color: #17a99c;
 }
 .logo-wrapper {
-	background: #444;
+	text-align: right;
+	position: relative;
+	/* left: 130px; */
+	top: 330px;
+	background-color: #44444499;
 	font-size: 2.3rem;
 	letter-spacing: 0.08rem;
 	font-weight: 400;
 	margin: 0;
 	padding: 20px;
+	padding-right: 15%;
 }
 nav {
 	background: #333;
@@ -71,6 +77,8 @@ main {
 	margin: 30px 0;
 	display: block;
 	text-decoration: none;
+	/* box-shadow: h_offset v_offset fuzz color; */
+	box-shadow: 12px 16px 14px rgba(0, 0, 0, 0.333);
 }
 .category .description {
 	text-align: center;
@@ -97,7 +105,16 @@ footer {
 	text-align: center;
 	padding: 20px;
 }
-
+/* tall skinny bar running vertically down whole page */
+.tall-bar {
+	position:absolute;
+	display: none;
+	top:0;
+	left: 25%;
+	width: 70px;
+	height: 200vh; /* twice the height of the screen */
+	background-color: #44444499;
+}
 @media (min-width: 750px) {
 	h1 {
 		margin-top: 2.5rem;
@@ -109,5 +126,10 @@ footer {
 	blockquote {
 		margin: 30px auto;
 		width: 60%;
+	}
+}
+@media (min-width: 1250px) {
+	.tall-bar {
+		display: block;
 	}
 }

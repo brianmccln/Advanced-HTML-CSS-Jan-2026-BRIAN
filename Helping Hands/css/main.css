@@ -56,7 +56,6 @@ h1 + p {
 }
 form {
 	border: 2px solid #888;
-	/* min-height: 400px; */
 	padding: 20px;
 	border-radius: 0 0 8px 8px;
 	background-color: #eee;
@@ -69,24 +68,43 @@ label {
 input[type="text"], 
 input[type="email"] {
 	font-size: 17px;
-	padding: 3px 6px;
-	width: 200px;
+	padding: 6px 12px;
+	width: 250px;
 	margin-bottom: 10px;
 }
 input[type="submit"] {
-	display: inline-block;
+	display: block;
 	font-size: 17px;
-	padding: 3px 6px;
-	margin-left: 105px; /* move sumbit btn over to the right */
-	width: 105px;
+	padding: 6px 12px;
+	margin: 20px auto 10px; /* move sumbit btn over to the right */
+	width: 90%;
 } 
 label[for="comments"] {
 	width: 100%;
 }
+input, textarea {
+	font-size: 16px;
+	background-color: #888;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+}
 textarea {
 	width: 100%;
 	min-height: 120px;
+	padding: 6px 12px;
 	resize: vertical; /* cannot drag textarea wider--only taller */
+}
+form ul {
+	columns: 2; /* 2 cols of checkboxes */
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+form ul label {
+	width: auto;
 }
 .content-wrapper {
 	margin: 0 auto;
